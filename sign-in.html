@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white bg-[#000000] flex flex-col justify-center items-center py-8">
+    <h1 class="pb-4"><a href="index.html"><img src="images/logo.png" alt="" width="120px"></a></h1>
+    <div class="w-full max-w-md bg-white text-black flex flex-col justify-center space-y-4 pt-6 border-2 rounded-3xl overflow-hidden">
+        <div class="flex flex-col justify-center items-center space-y-5">
+            <div class="w-[80%] flex justify-between items-center"><div class="text-base font-bold"><a href="#">Sign in</a></div> <div class="text-sm"><a href="index.html">Cancel</a></div></div> 
+            <div class="w-[80%] p-2 bg-white text-gray-400 rounded-md overflow-hidden border-2 border-gray-300 shadow-sm">
+                <p class="text-base font-semibold">email address</p>
+                <input type="email" class="w-full">
+            </div>
+            <div class="w-[80%] p-2 bg-white text-gray-400 rounded-md border-2 border-gray-300">
+                <p class="text-base font-semibold">Password</p>
+                <input type="password" class="w-full">
+            </div>
+            <button href="#" class="items-center w-[80%] px-8 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-md hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                Sign in
+            </button>
+            <a href="#" class="text-base hover:underline hover:underline-offset-4">Forgot my password</a>
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="bg-gray-300 w-full text-center">
+                <h1 class="underline py-3 text-black"><a href="sign-up.html">I want to become a customer</a></h1>
+            </div>
+            <div class="bg-gray-200 p-4 flex flex-col sm:flex-row items-center justify-center">
+                <div class="mb-4 w-full max-w-sm sm:w-fit">
+                    <img src="images/nojd_kund_garanti.png" alt="nojd_kund_garanti">
+                </div>
+                <div class="w-full text-xs max-w-sm sm:w-fit">
+                    <ul class="sm:ml-3 w-full max-w-sm space-y-3">
+                        <li><i class="fa-solid fa-check text-green-700"></i> Always fresh products</li>
+                        <li><i class="fa-solid fa-check text-green-700"></i>Durability guarantee on fresh products</li>
+                        <li><i class="fa-solid fa-check text-green-700"></i>Bonus on everything you buy </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
