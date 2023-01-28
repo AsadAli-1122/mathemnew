@@ -47,9 +47,8 @@ const handleIncrement = () => {
 incrementCount.addEventListener("click", handleIncrement);
 decrementCount.addEventListener("click", handleDecrement);
 
-// const x = document.getElementById('fixed_off_price').innerText;
-// console.log(x);
-
+const x = (document.getElementById('product_1').parentElement.parentElement.firstElementChild);
+console.log(x);
 
 function clickToOpen(product){
     const pre_product = document.getElementById("pre_product");
@@ -64,6 +63,11 @@ function clickToOpen(product){
         pre_product.style.visibility ="visible";
         pre_product.dataset.pre = 'product_'+pre;
         next_product.dataset.pre = 'product_'+next;
+    }
+    if(next == 7){
+        next_product.style.visibility='hidden';
+    }else{
+        next_product.style.visibility ='visible'
     }
     document.getElementById('product_bg').classList.remove('hidden');
     document.getElementById('openProduct').classList.remove('hidden');
@@ -100,16 +104,10 @@ function clickToOpen(product){
     fixedPrice.innerText=productPrice;
     fixedPricePerKG.innerText=productPricePerKG;
     fixedMax.innerText=productMax;
-    // Open.classList.remove('hidden');
-    // Open2.classList.remove('hidden');
 };
 function clickToClose(){
     document.getElementById('product_bg').classList.add('hidden');
     document.getElementById('openProduct').classList.add('hidden');
-    // const Close = document.getElementById(name);
-    // const Close2 = document.getElementById(name2);
-    // Close.classList.add('hidden');
-    // Close2.classList.add('hidden');
 }
 
 

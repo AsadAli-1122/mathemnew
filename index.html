@@ -453,79 +453,76 @@
         <h1 class="text-2xl font-bold">Veckan extrapriser</h1>
         <p class="text-base text-red-500">Visa alla</p>
       </div>
-      <div class="all-products px-4 flex flex-row md:space-x-2 w-full overflow-x-scroll pb-6">
-        
-        <div class="fixed-product-bg bg-black fixed h-[100vh] top-0 left-0 right-0 opacity-70 z-40 hidden" id="product_bg"></div>
-        <div class="fixed-product fixed h-[100vh] top-0 left-0 right-0 z-50 hidden" id="openProduct" >
-          <div class="w-full h-full flex justify-between items-center z-20 md:px-10">
-            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="pre_product"  onclick="preProduct('pre_product')">
-              <button class="p-2" >
-                <i class="fa-solid fa-arrow-left text-4xl"></i>
-              </button>
-            </div>
-            <div class="product w-full h-[100vh] md:w-[70%] md:h-[85%] md:max-w-[50rem] bg-white md:rounded-lg overflow-y-scroll ">
-              <div class="p-4 pb-16">
-                <div class="flex justify-between items-center w-full sticky top-0 py-1 bg-white">
-                  <div class=" "> 
-                    <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold" id="fixed_off_price">00</div>
-                    
-                  </div>
-                  <div class="w-6 h-6 rounded-full flex justify-center items-center text-gray-400 hover:text-black transform hover:scale-150 transition duration-500 ease-in-out" onclick="clickToClose('openProduct','product-bg')" >
-                    <i class="fa-solid fa-xmark mx-[6px] text-lg active:font-bold"></i>
-                  </div>
+      <div class="fixed-product-bg bg-black fixed h-[100vh] top-0 left-0 right-0 opacity-70 z-40 hidden" id="product_bg"></div>
+      <div class="fixed-product fixed h-[100vh] top-0 left-0 right-0 z-50 hidden" id="openProduct" >
+        <div class="w-full h-full flex justify-between items-center z-20 md:px-10">
+          <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="pre_product"  onclick="preProduct('pre_product')">
+            <button class="p-2" >
+              <i class="fa-solid fa-arrow-left text-4xl"></i>
+            </button>
+          </div>
+          <div class="product w-full h-[100vh] md:w-[70%] md:h-[85%] md:max-w-[50rem] bg-white md:rounded-lg overflow-y-scroll ">
+            <div class="p-4 pb-16">
+              <div class="flex justify-between items-center w-full sticky top-0 py-1 bg-white">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold" id="fixed_off_price">00</div>
+                  
                 </div>
-                <div class="w-full flex justify-center" >
-                    <img src="" alt="" class="w-[50%]" id="fixedProductImage">
-                    
+                <div class="w-6 h-6 rounded-full flex justify-center items-center text-gray-400 hover:text-black transform hover:scale-150 transition duration-500 ease-in-out" onclick="clickToClose('openProduct','product-bg')" >
+                  <i class="fa-solid fa-xmark mx-[6px] text-lg active:font-bold"></i>
                 </div>
-                <div class="w-full flex justify-between items-center ">
-                    <div class="text-base font-semibold text-gray-500" id="fixed_field"></div>
-                    <div><img src="images/msc.png" alt="msc" width="40px" id="fixed_field_img"></div>
+              </div>
+              <div class="w-full flex justify-center" >
+                  <img src="" alt="" class="w-[50%]" id="fixedProductImage">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-base font-semibold text-gray-500" id="fixed_field"></div>
+                  <div><img src="images/msc.png" alt="msc" width="40px" id="fixed_field_img"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-xl font-semibold" id="fixed_name"></div>
+              </div>
+              <div class="w-full flex justify-between items-center mb-10">
+                  <div class="text-base font-semibold text-gray-500" id="fixed_weight">600 g</div>
+                  <div class="text-base font-semibold text-gray-500" id="fixed_address">Nordostatlanten</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-xl font-bold text-red-600" id="fixed_off_price_in"></div>
+                  <div class="font-bold text-base" id="fixed_price"><s>145:-</s> </div>
                 </div>
-                <div>
-                    <div class="whitespace-nowrap text-xl font-semibold" id="fixed_name"></div>
+                <div class="flex flex-col items-end">
+                  <div class="text-sm font-bold text-gray-500" id="fixed_price_perKG">165:-/kg</div>
+                  <div class="text-sm font-semibold text-gray-500" id="fixed_max">Max 2 / kop</div>
                 </div>
-                <div class="w-full flex justify-between items-center mb-10">
-                    <div class="text-base font-semibold text-gray-500" id="fixed_weight">600 g</div>
-                    <div class="text-base font-semibold text-gray-500" id="fixed_address">Nordostatlanten</div>
-                </div>
-                <div class="flex justify-between items-center my-4">
-                  <div class="flex flex-col items-start">
-                    <div class="text-xl font-bold text-red-600" id="fixed_off_price_in"></div>
-                    <div class="font-bold text-base" id="fixed_price"><s>145:-</s> </div>
-                  </div>
-                  <div class="flex flex-col items-end">
-                    <div class="text-sm font-bold text-gray-500" id="fixed_price_perKG">165:-/kg</div>
-                    <div class="text-sm font-semibold text-gray-500" id="fixed_max">Max 2 / kop</div>
-                  </div>
-                </div>
-                <div class="flex w-full mb-3 z-20">
-                  <div class="fixed bottom-20 left-0 right-0 flex justify-center items-center">
-                    <div class="border-2 border-gray-500 bg-white w-[85%] max-w-[30rem] rounded-full px-2 pl-8 shadow4">
-                      <div class="flex justify-between items-center">
-                        <div class="flex flex-col items-start">
-                          <div class="text-base md:text-xl font-bold text-red-600">99:-</div>
-                          <div class="font-bold text-sm md:text-base flex items-center"><s>145:-</s><span class="text-[10px] sm:text-xs ml-2 text-gray-500 whitespace-nowrap">Compare price 165:- /kg</span> </div>
-                        </div>
-                        <div>
-                          <button class="text-white text-lg bg-green-600 hover:bg-green-700 px-4 sm:px-12 py-1 rounded-full">Buy</button>
-                        </div>
+              </div>
+              <div class="flex w-full mb-3 z-20">
+                <div class="fixed bottom-20 left-0 right-0 flex justify-center items-center">
+                  <div class="border-2 border-gray-500 bg-white w-[85%] max-w-[30rem] rounded-full px-2 pl-8 shadow4">
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col items-start">
+                        <div class="text-base md:text-xl font-bold text-red-600">99:-</div>
+                        <div class="font-bold text-sm md:text-base flex items-center"><s>145:-</s><span class="text-[10px] sm:text-xs ml-2 text-gray-500 whitespace-nowrap">Compare price 165:- /kg</span> </div>
+                      </div>
+                      <div>
+                        <button class="text-white text-lg bg-green-600 hover:bg-green-700 px-4 sm:px-12 py-1 rounded-full">Buy</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-    
             </div>
-            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="next_product" onclick="nextProduct('next_product')">
-              <button class="p-2"  onclick="">
-                <i class="fa-solid fa-arrow-right text-4xl"></i>
-              </button>
-            </div>
+  
+          </div>
+          <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="next_product" onclick="nextProduct('next_product')">
+            <button class="p-2"  onclick="">
+              <i class="fa-solid fa-arrow-right text-4xl"></i>
+            </button>
           </div>
         </div>
-
-
+      </div>
+      <div class="all-products px-4 flex flex-row md:space-x-2 w-full overflow-x-scroll pb-6">
           <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
             <div class="p-4" id="product_1">
               <div class="flex justify-between items-start w-full">
@@ -555,7 +552,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">92:-</div>
-                  <div class="font-bold text-[0.7rem]"s>146:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>146:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -596,7 +593,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -637,7 +634,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -678,7 +675,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -719,7 +716,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -760,7 +757,7 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -772,8 +769,6 @@
               </div>
             </div>
           </div>
-
-          
       </div>
     </div>
 
