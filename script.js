@@ -38,7 +38,7 @@ const handleDecrement = () => {
     }
 };
 const handleIncrement = () => {
-if(count < 10){
+    if(count < 10){
         count++;
         totalCount.innerHTML = count;
         RangeValue.value=count;
@@ -47,34 +47,129 @@ if(count < 10){
 incrementCount.addEventListener("click", handleIncrement);
 decrementCount.addEventListener("click", handleDecrement);
 
+// const x = document.getElementById('fixed_off_price').innerText;
+// console.log(x);
 
-function clickToOpen(name,name2,product,field,name_){
-    const Open = document.getElementById(name);
-    const Open2 = document.getElementById(name2);
-    const fixedProduct = document.getElementById('fixedProduct');
+
+function clickToOpen(product){
+    const pre_product = document.getElementById("pre_product");
+    const next_product = document.getElementById("next_product");
+    var product_id = product.replace('product_','');
+    var pre = parseInt(product_id)-1;
+    var next = parseInt(product_id)+1;
+    if (pre == 0) {
+        pre_product.style.visibility ="hidden";
+        next_product.dataset.pre = 'product_'+next;
+    } else {
+        pre_product.style.visibility ="visible";
+        pre_product.dataset.pre = 'product_'+pre;
+        next_product.dataset.pre = 'product_'+next;
+    }
+    document.getElementById('product_bg').classList.remove('hidden');
+    document.getElementById('openProduct').classList.remove('hidden');
+    const fixedOffPrice = document.getElementById('fixed_off_price');
+    const fixedProductImage = document.getElementById('fixedProductImage');
     const fixedfield = document.getElementById('fixed_field');
+    const fixedfieldImg = document.getElementById('fixed_field_img');
     const fixedname = document.getElementById("fixed_name");
-    const product_src = document.getElementById(product).childNodes[1].src;
-    const field1 = document.getElementById(field).innerText;
-    const product_name = document.getElementById(name_).innerText;
-    fixedProduct.src=product_src;
+    const fixedWeight = document.getElementById("fixed_weight");
+    const fixedAddress = document.getElementById("fixed_address");
+    const fixedOffPricein = document.getElementById("fixed_off_price_in");
+    const fixedPrice = document.getElementById("fixed_price");
+    const fixedPricePerKG = document.getElementById("fixed_price_perKG");
+    const fixedMax = document.getElementById("fixed_max");
+    const off_price1 = document.getElementById(product).children[0].children[0].children[0].innerText;
+    const product_src = document.getElementById(product).children[1].children[0].src;
+    const field1 = document.getElementById(product).children[2].children[0].innerText;
+    const field1Img = document.getElementById(product).children[2].children[1].children[0].src;
+    const product_name = document.getElementById(product).children[3].children[0].innerText;
+    const productWeight= document.getElementById(product).children[4].children[0].innerText;
+    const productAddress = document.getElementById(product).children[4].children[0].innerText;
+    const productOffPriceIn = document.getElementById(product).children[5].children[0].children[0].innerText;
+    const productPrice = document.getElementById(product).children[5].children[0].children[1].innerText;
+    const productPricePerKG = document.getElementById(product).children[5].children[1].children[0].innerText;
+    const productMax = document.getElementById(product).children[5].children[1].children[1].innerText;
+    fixedOffPrice.innerText=off_price1;
+    fixedProductImage.src=product_src;
     fixedfield.innerText=field1;
+    fixedfieldImg.src=field1Img;
     fixedname.innerText=product_name;
-    Open.classList.remove('hidden');
-    Open2.classList.remove('hidden');
+    fixedWeight.innerText=productWeight;
+    fixedAddress.innerText=productAddress;
+    fixedOffPricein.innerText=productOffPriceIn;
+    fixedPrice.innerText=productPrice;
+    fixedPricePerKG.innerText=productPricePerKG;
+    fixedMax.innerText=productMax;
+    // Open.classList.remove('hidden');
+    // Open2.classList.remove('hidden');
 };
-function clickToClose(name,name2){
-    const Close = document.getElementById(name);
-    const Close2 = document.getElementById(name2);
-    Close.classList.add('hidden');
-    Close2.classList.add('hidden');
+function clickToClose(){
+    document.getElementById('product_bg').classList.add('hidden');
+    document.getElementById('openProduct').classList.add('hidden');
+    // const Close = document.getElementById(name);
+    // const Close2 = document.getElementById(name2);
+    // Close.classList.add('hidden');
+    // Close2.classList.add('hidden');
 }
 
-function pre_product(){
 
+function nextProduct(next){
+    dev(next);
 }
-
-
-// const product = document.getElementById("product_name_1").innerText;
-// console.log(product);
-
+function preProduct(next){
+    dev(next);
+}
+function dev(next) {
+    const next1 = document.getElementById(next);
+    const product =next1.getAttribute('data-pre');
+    const pre_product = document.getElementById("pre_product");
+    const next_product = document.getElementById("next_product");
+    var product_id = product.replace('product_','');
+    var pre = parseInt(product_id)-1;
+    var next = parseInt(product_id)+1;
+    if (pre == 0) {
+        pre_product.style.visibility ="hidden";
+    } else {
+        pre_product.style.visibility ="visible";
+        pre_product.dataset.pre = 'product_'+pre;
+        next_product.dataset.pre = 'product_'+next;
+    }
+    if(next == 7){
+        next_product.style.visibility='hidden';
+    }else{
+        next_product.style.visibility ='visible'
+    }
+    const fixedOffPrice = document.getElementById('fixed_off_price');
+    const fixedProductImage = document.getElementById('fixedProductImage');
+    const fixedfield = document.getElementById('fixed_field');
+    const fixedfieldImg = document.getElementById('fixed_field_img');
+    const fixedname = document.getElementById("fixed_name");
+    const fixedWeight = document.getElementById("fixed_weight");
+    const fixedAddress = document.getElementById("fixed_address");
+    const fixedOffPricein = document.getElementById("fixed_off_price_in");
+    const fixedPrice = document.getElementById("fixed_price");
+    const fixedPricePerKG = document.getElementById("fixed_price_perKG");
+    const fixedMax = document.getElementById("fixed_max");
+    const off_price1 = document.getElementById(product).children[0].children[0].children[0].innerText;
+    const product_src = document.getElementById(product).children[1].children[0].src;
+    const field1 = document.getElementById(product).children[2].children[0].innerText;
+    const field1Img = document.getElementById(product).children[2].children[1].children[0].src;
+    const product_name = document.getElementById(product).children[3].children[0].innerText;
+    const productWeight= document.getElementById(product).children[4].children[0].innerText;
+    const productAddress = document.getElementById(product).children[4].children[0].innerText;
+    const productOffPriceIn = document.getElementById(product).children[5].children[0].children[0].innerText;
+    const productPrice = document.getElementById(product).children[5].children[0].children[1].innerText;
+    const productPricePerKG = document.getElementById(product).children[5].children[1].children[0].innerText;
+    const productMax = document.getElementById(product).children[5].children[1].children[1].innerText;
+    fixedOffPrice.innerText=off_price1;
+    fixedProductImage.src=product_src;
+    fixedfield.innerText=field1;
+    fixedfieldImg.src=field1Img;
+    fixedname.innerText=product_name;
+    fixedWeight.innerText=productWeight;
+    fixedAddress.innerText=productAddress;
+    fixedOffPricein.innerText=productOffPriceIn;
+    fixedPrice.innerText=productPrice;
+    fixedPricePerKG.innerText=productPricePerKG;
+    fixedMax.innerText=productMax;
+}

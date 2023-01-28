@@ -455,11 +455,11 @@
       </div>
       <div class="all-products px-4 flex flex-row md:space-x-2 w-full overflow-x-scroll pb-6">
         
-        <div class="fixed-product-bg bg-black fixed h-[100vh] top-0 left-0 right-0 opacity-70 z-40 hidden" id="product-bg"></div>
+        <div class="fixed-product-bg bg-black fixed h-[100vh] top-0 left-0 right-0 opacity-70 z-40 hidden" id="product_bg"></div>
         <div class="fixed-product fixed h-[100vh] top-0 left-0 right-0 z-50 hidden" id="openProduct" >
           <div class="w-full h-full flex justify-between items-center z-20 md:px-10">
-            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full">
-              <button class="p-2" id="next_product">
+            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="pre_product"  onclick="preProduct('pre_product')">
+              <button class="p-2" >
                 <i class="fa-solid fa-arrow-left text-4xl"></i>
               </button>
             </div>
@@ -467,7 +467,7 @@
               <div class="p-4 pb-16">
                 <div class="flex justify-between items-center w-full sticky top-0 py-1 bg-white">
                   <div class=" "> 
-                    <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
+                    <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold" id="fixed_off_price">00</div>
                     
                   </div>
                   <div class="w-6 h-6 rounded-full flex justify-center items-center text-gray-400 hover:text-black transform hover:scale-150 transition duration-500 ease-in-out" onclick="clickToClose('openProduct','product-bg')" >
@@ -475,28 +475,28 @@
                   </div>
                 </div>
                 <div class="w-full flex justify-center" >
-                    <img src="" alt="" class="w-[50%]" id="fixedProduct">
+                    <img src="" alt="" class="w-[50%]" id="fixedProductImage">
                     
                 </div>
                 <div class="w-full flex justify-between items-center ">
                     <div class="text-base font-semibold text-gray-500" id="fixed_field"></div>
-                    <div><img src="images/msc.png" alt="msc" width="40px"></div>
+                    <div><img src="images/msc.png" alt="msc" width="40px" id="fixed_field_img"></div>
                 </div>
                 <div>
                     <div class="whitespace-nowrap text-xl font-semibold" id="fixed_name"></div>
                 </div>
                 <div class="w-full flex justify-between items-center mb-10">
-                    <div class="text-base font-semibold text-gray-500">600 g</div>
-                    <div class="text-base font-semibold text-gray-500">Nordostatlanten</div>
+                    <div class="text-base font-semibold text-gray-500" id="fixed_weight">600 g</div>
+                    <div class="text-base font-semibold text-gray-500" id="fixed_address">Nordostatlanten</div>
                 </div>
                 <div class="flex justify-between items-center my-4">
                   <div class="flex flex-col items-start">
-                    <div class="text-xl font-bold text-red-600">99:-</div>
-                    <div class="font-bold text-base"><s>145:-</s> </div>
+                    <div class="text-xl font-bold text-red-600" id="fixed_off_price_in"></div>
+                    <div class="font-bold text-base" id="fixed_price"><s>145:-</s> </div>
                   </div>
                   <div class="flex flex-col items-end">
-                    <div class="text-sm font-bold text-gray-500">165:-/kg</div>
-                    <div class="text-sm font-semibold text-gray-500">Max 2 / kop</div>
+                    <div class="text-sm font-bold text-gray-500" id="fixed_price_perKG">165:-/kg</div>
+                    <div class="text-sm font-semibold text-gray-500" id="fixed_max">Max 2 / kop</div>
                   </div>
                 </div>
                 <div class="flex w-full mb-3 z-20">
@@ -517,8 +517,8 @@
               </div>
     
             </div>
-            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full">
-              <button class="p-2" id="pre_product" onclick="">
+            <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="next_product" onclick="nextProduct('next_product')">
+              <button class="p-2"  onclick="">
                 <i class="fa-solid fa-arrow-right text-4xl"></i>
               </button>
             </div>
@@ -527,26 +527,67 @@
 
 
           <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4" >
+            <div class="p-4" id="product_1">
               <div class="flex justify-between items-start w-full">
                 <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">92:-</div>
                   
                 </div>
                 <div class="">
                   <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
                 </div>
               </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_1','product_field_1','product_name_1')"  id="product_1">
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_1')" >
                   <img src="images/broccoli-250g-klass1-1.webp" alt="" width="120px" height="100px">
                   
               </div>
               <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500" id="product_field_1">Feldts 1</div>
+                  <div class="text-xs font-semibold text-gray-500">Feldts 2</div>
                   <div><img src="images/msc.png" alt="msc" width="25px"></div>
               </div>
               <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_1">product name 1</div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 2</div>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                  <div class="text-xs font-semibold text-gray-500">600 g 2</div>
+                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten 2</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-base font-bold text-red-600">92:-</div>
+                  <div class="font-bold text-[0.7rem]"s>146:-</s> </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
+                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
+                </div>
+              </div>
+              <div class="flex w-full mb-3">
+                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
+            <div class="p-4" id="product_2">
+              <div class="flex justify-between items-start w-full">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">93:-</div>
+                  
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
+                </div>
+              </div>
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_2')" >
+                  <img src="images/2_e822dae0-14df-4cb8-b145-ea4dc0966b34.webp" alt="" width="120px" height="100px">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
+                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 1</div>
               </div>
               <div class="w-full flex justify-between items-center">
                   <div class="text-xs font-semibold text-gray-500">600 g 1</div>
@@ -555,7 +596,171 @@
               <div class="flex justify-between items-center my-4">
                 <div class="flex flex-col items-start">
                   <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
+                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
+                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
+                </div>
+              </div>
+              <div class="flex w-full mb-3">
+                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
+            <div class="p-4" id="product_3">
+              <div class="flex justify-between items-start w-full">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">94:-</div>
+                  
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
+                </div>
+              </div>
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_3')" >
+                  <img src="images/agg-frigaende-inomhus-15-p-s-762g-kronagg-2.jpg" alt="" width="120px" height="100px">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
+                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 1</div>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                  <div class="text-xs font-semibold text-gray-500">600 g 1</div>
+                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten 1</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-base font-bold text-red-600">99:-</div>
+                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
+                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
+                </div>
+              </div>
+              <div class="flex w-full mb-3">
+                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
+            <div class="p-4" id="product_4">
+              <div class="flex justify-between items-start w-full">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">95:-</div>
+                  
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
+                </div>
+              </div>
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_4')" >
+                  <img src="images/baby-plommontomater-250g-klass1-2.jpg" alt="" width="120px" height="100px">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
+                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 1</div>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                  <div class="text-xs font-semibold text-gray-500">600 g 1</div>
+                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten 1</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-base font-bold text-red-600">99:-</div>
+                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
+                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
+                </div>
+              </div>
+              <div class="flex w-full mb-3">
+                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
+            <div class="p-4" id="product_5">
+              <div class="flex justify-between items-start w-full">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">96:-</div>
+                  
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
+                </div>
+              </div>
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_5')" >
+                  <img src="images/bakpotatis-klass1-2.jpg" alt="" width="120px" height="100px">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
+                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 1</div>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                  <div class="text-xs font-semibold text-gray-500">600 g 1</div>
+                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten 1</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-base font-bold text-red-600">99:-</div>
+                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
+                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
+                </div>
+              </div>
+              <div class="flex w-full mb-3">
+                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
+            <div class="p-4" id="product_6">
+              <div class="flex justify-between items-start w-full">
+                <div class=" "> 
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">97:-</div>
+                  
+                </div>
+                <div class="">
+                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
+                </div>
+              </div>
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_6')" >
+                  <img src="images/blabar-125g-klass1-2.jpg" alt="" width="120px" height="100px">
+                  
+              </div>
+              <div class="w-full flex justify-between items-center ">
+                  <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
+                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
+              </div>
+              <div>
+                  <div class="whitespace-nowrap text-sm font-semibold">product name 1</div>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                  <div class="text-xs font-semibold text-gray-500">600 g 1</div>
+                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten 1</div>
+              </div>
+              <div class="flex justify-between items-center my-4">
+                <div class="flex flex-col items-start">
+                  <div class="text-base font-bold text-red-600">99:-</div>
+                  <div class="font-bold text-[0.7rem]"s>145:-</s> </div>
                 </div>
                 <div class="flex flex-col items-end">
                   <div class="text-xs font-bold text-gray-500">165:-/kg</div>
@@ -568,207 +773,7 @@
             </div>
           </div>
 
-          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4">
-              <div class="flex justify-between items-start w-full">
-                <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
-                  
-                </div>
-                <div class="">
-                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
-                </div>
-              </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_2','product_field_2','product_name_2')" id="product_2">
-                  <img src="images/tomato.jpg" alt="" width="120px" height="100px">
-              </div>
-              <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500" id="product_field_2">Feldts 2</div>
-                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
-              </div>
-              <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_2">Torskfile MSC Fryst</div>
-              </div>
-              <div class="w-full flex justify-between items-center">
-                  <div class="text-xs font-semibold text-gray-500">600 g</div>
-                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten</div>
-              </div>
-              <div class="flex justify-between items-center my-4">
-                <div class="flex flex-col items-start">
-                  <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
-                </div>
-                <div class="flex flex-col items-end">
-                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
-                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
-                </div>
-              </div>
-              <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
-              </div>
-            </div>
-  
-          </div>
-          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4">
-              <div class="flex justify-between items-start w-full">
-                <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
-                  
-                </div>
-                <div class="">
-                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
-                </div>
-              </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_3','product_field_3','product_name_3')"id="product_3">
-                  <img src="images/hallon.webp" alt="" width="120px" height="100px">
-              </div>
-              <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500"  id="product_field_3">Feldts 3</div>
-                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
-              </div>
-              <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_3">Torskfile MSC  3</div>
-              </div>
-              <div class="w-full flex justify-between items-center">
-                  <div class="text-xs font-semibold text-gray-500">600 g</div>
-                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten</div>
-              </div>
-              <div class="flex justify-between items-center my-4">
-                <div class="flex flex-col items-start">
-                  <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
-                </div>
-                <div class="flex flex-col items-end">
-                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
-                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
-                </div>
-              </div>
-              <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
-              </div>
-            </div>
-          </div>
-          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4">
-              <div class="flex justify-between items-start w-full">
-                <div class=""> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
-                </div>
-                <div class="">
-                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
-                </div>
-              </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_4','product_field_4','product_name_4')" id="product_4">
-                  <img src="images/laxfile-fryst-500g-feldt-s-7.jpg" alt="" width="120px" height="100px">
-              </div>
-              <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500" id="product_field_4">Feldt 4</div>
-                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
-              </div>
-              <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_4">ptotype name</div>
-              </div>
-              <div class="w-full flex justify-between items-center">
-                  <div class="text-xs font-semibold text-gray-500">600 g</div>
-                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten</div>
-              </div>
-              <div class="flex justify-between items-center my-4">
-                <div class="flex flex-col items-start">
-                  <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
-                </div>
-                <div class="flex flex-col items-end">
-                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
-                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
-                </div>
-              </div>
-              <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
-              </div>
-            </div>
-          </div>
-          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4">
-              <div class="flex justify-between items-start w-full">
-                <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
-                </div>
-                <div class="">
-                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
-                </div>
-              </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_5','product_field_5','product_name_5')" id="product_5">
-                  <img src="images/torskfile-msc-fryst-600g-feldt-s.jpg" alt="" width="120px" height="100px">
-              </div>
-              <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500" id="product_field_5">Feldts 5</div>
-                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
-              </div>
-              <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_5">product name 5</div>
-              </div>
-              <div class="w-full flex justify-between items-center">
-                  <div class="text-xs font-semibold text-gray-500">600 g</div>
-                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten</div>
-              </div>
-              <div class="flex justify-between items-center my-4">
-                <div class="flex flex-col items-start">
-                  <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
-                </div>
-                <div class="flex flex-col items-end">
-                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
-                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
-                </div>
-              </div>
-              <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
-              </div>
-            </div>
-  
-          </div>
-          <div class="product border border-gray-300 min-w-[13rem] max-w-[18rem] rounded-lg">
-            <div class="p-4">
-              <div class="flex justify-between items-start w-full">
-                <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">99:-</div>
-                  
-                </div>
-                <div class="">
-                  <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
-                </div>
-              </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('openProduct','product-bg','product_6','product_field_6','product_name_6')"id="product_6">
-                  <img src="images/torskfile-msc-fryst-600g-feldt-s.jpg" alt="torskfile-msc-fryst-600g-feldt-s" width="120px" height="100px">
-              </div>
-              <div class="w-full flex justify-between items-center ">
-                  <div class="text-xs font-semibold text-gray-500" id="product_field_6">Feldt 6</div>
-                  <div><img src="images/msc.png" alt="msc" width="25px"></div>
-              </div>
-              <div>
-                  <div class="whitespace-nowrap text-sm font-semibold" id="product_name_6">product name 6</div>
-              </div>
-              <div class="w-full flex justify-between items-center">
-                  <div class="text-xs font-semibold text-gray-500">600 g</div>
-                  <div class="text-xs font-semibold text-gray-500">Nordostatlanten</div>
-              </div>
-              <div class="flex justify-between items-center my-4">
-                <div class="flex flex-col items-start">
-                  <div class="text-base font-bold text-red-600">99:-</div>
-                  <div class="font-bold text-[0.7rem]"><s>145:-</s> </div>
-                </div>
-                <div class="flex flex-col items-end">
-                  <div class="text-xs font-bold text-gray-500">165:-/kg</div>
-                  <div class="text-xs font-semibold text-gray-500">Max 2 / kop</div>
-                </div>
-              </div>
-              <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
-              </div>
-            </div>
-  
-          </div>
+          
       </div>
     </div>
 
