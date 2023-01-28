@@ -49,10 +49,6 @@ decrementCount.addEventListener("click", handleDecrement);
 
 
 function clickToOpen(name,name2,product,field,name_){
-    // var newStr = product.replace('product_','')
-    // var pre = parseInt(newStr)-1;
-    // var next = parseInt(newStr)+1;
-    // alert(next);
     const Open = document.getElementById(name);
     const Open2 = document.getElementById(name2);
     const fixedProduct = document.getElementById('fixedProduct');
