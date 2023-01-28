@@ -38,7 +38,7 @@ const handleDecrement = () => {
     }
 };
 const handleIncrement = () => {
- if(count < 10){
+if(count < 10){
         count++;
         totalCount.innerHTML = count;
         RangeValue.value=count;
