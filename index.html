@@ -1494,7 +1494,7 @@
 <div class="flex justify-center lg:justify-end w-full fixed bottom-14 lg:bottom-4 lg:right-4">
     <button class="bg-green-500 rounded-sm w-8 h-8 shadow-sm shadow-black"><a href="#body"><i class="fa-solid fa-chevron-up"></i></a></button>
 </div>
-<div class="flex items-center fixed bottom-14 right-3 px-6 py-2 bg-green-600 hover:bg-green-800 rounded-md text-white lg:left-4 lg:right-auto lg:bottom-4 shadow-sm shadow-green-700 whitespace-nowrap cursor-pointer" id="ChatBtn" onclick="clickToOpen('ChatBox')">
+<div class="flex items-center fixed bottom-14 right-3 px-6 py-2 bg-green-600 hover:bg-green-800 rounded-md text-white lg:left-4 lg:right-auto lg:bottom-4 shadow-sm shadow-green-700 whitespace-nowrap cursor-pointer" id="ChatBtn" onclick="openChat()">
     <i class="fa-solid fa-message mr-2"></i>
     <p class="text-sm">Chat</p>
 </div>
@@ -1503,8 +1503,8 @@
   <div class="bg-[#000000] py-2 px-4 text-lg font-bold text-white flex justify-between">
     <h1>Chat</h1>
     <div class="space-x-3">
-      <span class="cursor-pointer" onclick="clickToClose('ChatBox')">_</span>
-      <i class="fa solid fa-xmark cursor-pointer" onclick="clickToClose('ChatBox')"></i>
+      <span class="cursor-pointer" onclick="closeChat()">_</span>
+      <i class="fa solid fa-xmark cursor-pointer" onclick="closeChat()"></i>
     </div>
   </div>
   <div class="w-full bg-white py-2 px-4 space-y-4 max-h-[20rem] overflow-y-scroll">

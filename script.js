@@ -47,8 +47,8 @@ const handleIncrement = () => {
 incrementCount.addEventListener("click", handleIncrement);
 decrementCount.addEventListener("click", handleDecrement);
 
-const x = (document.getElementById('product_1').parentElement.parentElement.firstElementChild);
-console.log(x);
+// const x = (document.getElementById('product_1').parentElement.parentElement.firstElementChild);
+// console.log(x);
 
 function clickToOpen(product){
     const pre_product = document.getElementById("pre_product");
@@ -170,4 +170,13 @@ function dev(next) {
     fixedPrice.innerText=productPrice;
     fixedPricePerKG.innerText=productPricePerKG;
     fixedMax.innerText=productMax;
-}
+};
+
+const chatbox = document.getElementById('ChatBox');
+function openChat(){
+    chatbox.classList.remove('hidden');
+};
+function closeChat(){
+    chatbox.classList.add('hidden');
+};
+
