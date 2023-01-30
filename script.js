@@ -104,6 +104,17 @@ function clickToOpen(product){
     fixedPrice.innerText=productPrice;
     fixedPricePerKG.innerText=productPricePerKG;
     fixedMax.innerText=productMax;
+
+    const name = document.getElementById('demo');
+    name.innerText = product_name;
+    var scrol = document.getElementById('scroll');
+    if (scrol.scrollTop > 20) {
+        name.classList.remove('hidden');
+        document.getElementById('fixed_off_price').classList.remove('hidden');
+    } else {
+        name.classList.add('hidden');
+        document.getElementById('fixed_off_price').classList.add('hidden');
+    }
 };
 function clickToClose(){
     document.getElementById('product_bg').classList.add('hidden');
@@ -170,6 +181,18 @@ function dev(next) {
     fixedPrice.innerText=productPrice;
     fixedPricePerKG.innerText=productPricePerKG;
     fixedMax.innerText=productMax;
+
+
+    const name = document.getElementById('demo');
+    name.innerText = product_name;
+    var scrol = document.getElementById('scroll');
+    if (scrol.scrollTop > 20) {
+        name.classList.remove('hidden');
+        document.getElementById('fixed_off_price').classList.remove('hidden');
+    } else {
+        name.classList.add('hidden');
+        document.getElementById('fixed_off_price').classList.add('hidden');
+    }
 };
 
 const chatbox = document.getElementById('ChatBox');
@@ -179,4 +202,39 @@ function openChat(){
 function closeChat(){
     chatbox.classList.add('hidden');
 };
+
+
+// const fixedOffPrice = document.getElementById('fixed_off_price');
+
+var scrol = document.getElementById('scroll');
+    if (scrol.scrollTop > 20) {
+        document.getElementById("demo").classList.remove('hidden');
+        document.getElementById('fixed_off_price').classList.remove('hidden');
+    } else {
+        document.getElementById("demo").classList.add('hidden');
+        document.getElementById('fixed_off_price').classList.add('hidden');
+    }
+function scrollFunction() {
+    var scrol = document.getElementById('scroll');
+    if (scrol.scrollTop > 20) {
+        document.getElementById("demo").classList.remove('hidden');
+        document.getElementById('fixed_off_price').classList.remove('hidden');
+
+    } else {
+        document.getElementById("demo").classList.add('hidden');
+        document.getElementById('fixed_off_price').classList.add('hidden');
+    }
+    }
+
+
+// add to cart function
+function addToCart(){
+    var a = document.getElementById("dev");
+    var b = '<div class="p-3 flex items-start"><div class="w-[50px] h-[50px]"><img src="images/tomato.jpg" alt="" width="100%"></div><div class="w-full flex flex-row justify-between"><div class="flex flex-col justify-between items-start ml-2"><div><p class="text-sm">Creme Fraiche 32% 2dl Arla</p></div><div><p class="text-lg font-bold">53:85</p></div></div><div class="flex justify-center items-center space-x-4"><div id="decrement-count"><button type="image" id="down-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">-</button></div><div id="total-count" class="text-xl font-semibold w-[50px] flex justify-center items-center pb-1"></div><div id="increment-count" ><button type="image" id="up-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">+</button></div></div></div></div>';
+    a.insertAdjacentHTML("afterend",b);
+    
+}
+
+document.getElementById('plus_1')
+
 

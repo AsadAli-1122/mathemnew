@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Handla mat online i din matbutik | Mathem</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/buenos-aris-nf" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
@@ -53,27 +52,8 @@
             <div class="w-full bg-gray-100 mt-4 p-2"> 
                 <h1 class="text-xl font-bold">Dairy, cheese & juice</h1>
             </div>
-            <div class="p-3 flex items-start">
-                <div class="w-[50px] h-[50px]">
-                    <img src="images/tomato.jpg" alt="" width="100%">
-                </div>
-                <div class="w-full flex flex-row justify-between">
-                    <div class="flex flex-col justify-between items-start ml-2">
-                        <div><p class="text-sm">Creme Fraiche 32% 2dl Arla</p></div>
-                        <div><p class="text-lg font-bold">53:85</p></div>
-                    </div>
-                    
-                    <div class="flex justify-center items-center space-x-4">
-                      <div id="decrement-count">
-                          <button type="image" id="down-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">-</button>
-                        </div>
-                      <div id="total-count" class="text-xl font-semibold w-[50px] flex justify-center items-center pb-1">
-                      </div>
-                      <div id="increment-count" >
-                          <button type="image" id="up-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">+</button>
-                        </div>
-                  </div>
-                </div>
+            <div id="dev">
+              <div class="p-3 flex items-start"><div class="w-[50px] h-[50px]"><img src="images/tomato.jpg" alt="" width="100%"></div><div class="w-full flex flex-row justify-between"><div class="flex flex-col justify-between items-start ml-2"><div><p class="text-sm">Creme Fraiche 32% 2dl Arla</p></div><div><p class="text-lg font-bold">53:85</p></div></div><div class="flex justify-center items-center space-x-4"><div id="decrement-count"><a type="image" id="down-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">-</a></div><div id="total-count" class="text-xl font-semibold w-[50px] flex justify-center items-center pb-1"></div><div id="increment-count" ><a type="image" id="up-arrow" class="bg-gray-500 h-[30px] w-[30px] rounded-full text-3xl font-semibold flex justify-center pb-[3px] items-center cursor-pointer hover:bg-black hover:text-white">+</a></div></div></div></div>
             </div>
             <hr class="mb-3">
             <div class="flex flex-row items-center space-x-4 mb-3">
@@ -115,7 +95,7 @@
                       </div>
                 </div>
                 <div class="h-full">
-                    <button class="text-white bg-green-600 hover:bg-green-800 py-[5px] rounded-md text-sm px-6 sm:text-base sm:px-8 whitespace-nowrap">To the checkout</button>
+                    <a class="text-white bg-green-600 hover:bg-green-800 py-[5px] rounded-md text-sm px-6 sm:text-base sm:px-8 whitespace-nowrap">To the checkout</a>
                 </div>
             </div>
 
@@ -165,7 +145,7 @@
                 <div class="w-full py-[14px]">
                     <input type="text" class="w-full focus:outline-none" placeholder="Search thousands of products and recipes">
                 </div>
-                <button class="hidden lg:block bg-gray-400 hover:bg-green-700 text-white h-[40px] px-[20px] rounded-md">Search</button>
+                <a class="hidden lg:block bg-gray-400 hover:bg-green-700 text-white h-[40px] px-[20px] rounded-md">Search</a>
             </div>
             <div class="hidden lg:flex items-center">
                 <div class="w-[40px] h-[51px] flex items-center justify-center">
@@ -183,26 +163,26 @@
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1"><a href="index.html">Home</a></span>
                           </svg>
-                        </button>
+                        </a>
                       </div>
                     </div>
                 </div>
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1">Categories</span>
                           <svg class="fill-current h-4 w-4">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
                           </svg>
-                        </button>
+                        </a>
                         <div class="absolute hidden text-gray-700 group-hover:block bg-white p-8 pb-10 rounded-b-[60px] overflow-hidden">
                             <div class="flex space-x-4">
                                 <ul class="pr-16 border-r-2 border-gray-300">
@@ -229,14 +209,14 @@
                 <div class="antialiased">
                   <div class="">
                     <div class="group inline-block relative">
-                      <button
+                      <a
                         class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                       >
                         <span class="mr-1">Offers</span>
                         <svg class="fill-current h-4 w-4">
                           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
                         </svg>
-                      </button>
+                      </a>
                       <div class="absolute hidden text-gray-700 group-hover:block bg-white p-8 pb-10 rounded-b-[60px] overflow-hidden">
                           <div class="flex space-x-4">
                               <ul class="pr-16 border-r-2 border-gray-300">
@@ -263,12 +243,12 @@
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1">About us</span>
                           
-                        </button>
+                        </a>
                         
                       </div>
                     </div>
@@ -277,12 +257,12 @@
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1">Contact us</span>
                           
-                        </button>
+                        </a>
                         
                       </div>
                     </div>
@@ -294,12 +274,12 @@
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1"><a href="sign-up.html">New Customer</a></span>
                           </svg>
-                        </button>
+                        </a>
                         
                       </div>
                     </div>
@@ -307,12 +287,12 @@
                 <div class="antialiased">
                     <div class="">
                       <div class="group inline-block relative">
-                        <button
+                        <a
                           class="bg-white text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
                         >
                           <span class="mr-1"><a href="sign-in.html">Sign in</a></span>
                           </svg>
-                        </button>
+                        </a>
                         
                       </div>
                     </div>
@@ -335,26 +315,26 @@
           
         <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
           <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-            <button
-              type="button"
+            <a
+              type="a"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="0"
               class="active"
               aria-current="true"
               aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
+            ></a>
+            <a
+              type="a"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="1"
               aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
+            ></a>
+            <a
+              type="a"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="2"
               aria-label="Slide 3"
-            ></button>
+            ></a>
           </div>
           <div class="carousel-inner relative w-full h-96 overflow-hidden">
             <div class="carousel-item active relative float-left w-full">
@@ -380,24 +360,24 @@
               
             </div>
           </div>
-          <button
+          <a
             class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-            type="button"
+            type="a"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-          </button>
-          <button
+          </a>
+          <a
             class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-            type="button"
+            type="a"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
+          </a>
         </div>
 
 
@@ -457,16 +437,17 @@
       <div class="fixed-product fixed h-[100vh] top-0 left-0 right-0 z-50 hidden" id="openProduct" >
         <div class="w-full h-full flex justify-between items-center z-20 md:px-10">
           <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="pre_product"  onclick="preProduct('pre_product')">
-            <button class="p-2" >
+            <a class="p-2" >
               <i class="fa-solid fa-arrow-left text-4xl"></i>
-            </button>
+            </a>
           </div>
-          <div class="product w-full h-[100vh] md:w-[70%] md:h-[85%] md:max-w-[50rem] bg-white md:rounded-lg overflow-y-scroll ">
+          <div class="product w-full h-[100vh] md:w-[70%] md:h-[85%] md:max-w-[50rem] bg-white md:rounded-lg overflow-y-scroll" id="scroll" onscroll="scrollFunction()">
             <div class="p-4 pb-16">
               <div class="flex justify-between items-center w-full sticky top-0 py-1 bg-white">
                 <div class=" "> 
-                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold" id="fixed_off_price">00</div>
-                  
+                  <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold" id="fixed_off_price"></div>
+                </div>
+                <div id="demo">
                 </div>
                 <div class="w-6 h-6 rounded-full flex justify-center items-center text-gray-400 hover:text-black transform hover:scale-150 transition duration-500 ease-in-out" onclick="clickToClose('openProduct','product-bg')" >
                   <i class="fa-solid fa-xmark mx-[6px] text-lg active:font-bold"></i>
@@ -497,6 +478,9 @@
                   <div class="text-sm font-semibold text-gray-500" id="fixed_max">Max 2 / kop</div>
                 </div>
               </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, fuga velit nam distinctio quas ipsam praesentium quibusdam fugiat libero enim quidem sunt porro qui consequatur veritatis beatae tempora nostrum possimus et fugit? Libero nulla facere fugiat sequi nisi omnis autem soluta nemo, porro iure similique impedit quis quod labore quo nobis in ratione atque? Blanditiis minima consequatur error numquam voluptatum impedit consectetur, esse vitae reprehenderit ipsa odit nisi ratione itaque alias. Commodi officia enim, ad id rerum, alias illum sed cumque quibusdam, hic dolores ipsam qui libero non numquam necessitatibus voluptatem deserunt veniam? Corrupti porro quo dolorum error, dolor ex.
+              </p>
               <div class="flex w-full mb-3 z-20">
                 <div class="fixed bottom-20 left-0 right-0 flex justify-center items-center">
                   <div class="border-2 border-gray-500 bg-white w-[85%] max-w-[30rem] rounded-full px-2 pl-8 shadow4">
@@ -506,7 +490,7 @@
                         <div class="font-bold text-sm md:text-base flex items-center"><s>145:-</s><span class="text-[10px] sm:text-xs ml-2 text-gray-500 whitespace-nowrap">Compare price 165:- /kg</span> </div>
                       </div>
                       <div>
-                        <button class="text-white text-lg bg-green-600 hover:bg-green-700 px-4 sm:px-12 py-1 rounded-full">Buy</button>
+                        <a class="text-white text-lg bg-green-600 hover:bg-green-700 px-4 sm:px-12 py-1 rounded-full">Buy</a>
                       </div>
                     </div>
                   </div>
@@ -516,9 +500,9 @@
   
           </div>
           <div class="hidden w-16 h-16 md:flex justify-center items-center bg-white text-gray-400 hover:text-black rounded-full" id="next_product" onclick="nextProduct('next_product')">
-            <button class="p-2"  onclick="">
+            <a class="p-2"  onclick="">
               <i class="fa-solid fa-arrow-right text-4xl"></i>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -560,7 +544,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -569,15 +553,13 @@
               <div class="flex justify-between items-start w-full">
                 <div class=" "> 
                   <div class="flex text-center justify-center items-center bg-red-500 rounded-full w-[45px] h-[45px] text-white font-semibold">93:-</div>
-                  
                 </div>
                 <div class="">
                   <i class="fa-regular fa-heart text-lg active:font-bold hover:text-yellow-600"></i>
                 </div>
               </div>
-              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_2')" >
-                  <img src="images/2_e822dae0-14df-4cb8-b145-ea4dc0966b34.webp" alt="" width="120px" height="100px">
-                  
+              <div class="w-full flex justify-center cursor-pointer" onclick="clickToOpen('product_2')">
+                  <img src="images/baby-plommontomater-250g-klass1-2.jpg" alt="" width="120px" height="100px">
               </div>
               <div class="w-full flex justify-between items-center ">
                   <div class="text-xs font-semibold text-gray-500">Feldts 1</div>
@@ -601,7 +583,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -642,7 +624,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -683,7 +665,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -724,7 +706,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -765,7 +747,7 @@
                 </div>
               </div>
               <div class="flex w-full mb-3">
-                <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
               </div>
             </div>
           </div>
@@ -781,7 +763,7 @@
                 <div class="p-4 flex flex-col justify-between">
                     <div class="text-xl font-bold ">Delicious dinner tips</div>
                     <div class="font-semibold leading-4">Make the most of this week's extras.</div>
-                    <button class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</button>
+                    <a class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</a>
                 </div>
             </div>
             <div class="x-product border border-gray-900 min-w-[20rem] h-36 overflow-hidden flex bg-cyan-200">
@@ -791,7 +773,7 @@
                 <div class="p-4 flex flex-col justify-between">
                     <div class="text-xl font-bold ">Delicious dinner tips</div>
                     <div class="font-semibold leading-4">Make the most of this week's extras.</div>
-                    <button class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</button>
+                    <a class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</a>
                 </div>
             </div>
             <div class="x-product border border-gray-900 min-w-[20rem] h-36 overflow-hidden flex bg-cyan-200">
@@ -801,7 +783,7 @@
                 <div class="p-4 flex flex-col justify-between">
                     <div class="text-xl font-bold ">Delicious dinner tips</div>
                     <div class="font-semibold leading-4">Make the most of this week's extras.</div>
-                    <button class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</button>
+                    <a class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</a>
                 </div>
             </div>
             <div class="x-product border border-gray-900 min-w-[20rem] h-36 overflow-hidden flex bg-cyan-200">
@@ -811,7 +793,7 @@
                 <div class="p-4 flex flex-col justify-between">
                     <div class="text-xl font-bold ">Delicious dinner tips</div>
                     <div class="font-semibold leading-4">Make the most of this week's extras.</div>
-                    <button class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</button>
+                    <a class="py-1 px-6 border-2 border-black bg-white hover:bg-black hover:text-white  w-fit rounded-md pb-[5.5px] mx-auto">Read more</a>
                 </div>
             </div>
             
@@ -861,7 +843,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -963,7 +945,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1045,7 +1027,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1127,7 +1109,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1209,7 +1191,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1291,7 +1273,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1373,7 +1355,7 @@
                             </div>
                           </div>
                           <div class="flex w-full mb-3">
-                            <div class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></div>
+                            <a class="ml-auto bg-red-500 w-[30px] h-[30px] rounded-[50%] flex justify-center items-center text-center"><i class="fa-solid fa-plus text-white"></i></a>
                           </div>
                         </div>
               
@@ -1485,9 +1467,6 @@
               <div class="mt-4 text-sm">
                 <p>Copyright &copy; 2022 <a href="#" class="underline underline-offset-3">example.com</a></p>
               </div>
-
-
-            
             </div>
     </footer>
 <!-- fixed bottom -->
